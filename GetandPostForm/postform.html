@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1>Post Form Example</h1>
+    <form action="data1.php" method="post">
+        <label for="">Enter Your Name : </label>
+        <input type="text" name="username">
+
+        <br><br>
+
+        <label for="">Enter Your Email : </label>
+        <input type="email" name="useremail">
+
+        <br><br>
+
+        <label for="">Enter Quantity : </label>
+        <input type="number" name="quan">
+
+        <br><br>
+
+        <label for="">Select Your Ticket Category : </label>
+        <select name="category" id="">
+            <option value="silver">Silver</option>
+            <option value="gold">Gold</option>
+            <option value="pla">Platinium</option>
+
+        </select>
+
+        <br><br>
+
+        <label for="">Select Movie : </label>
+        <select name="movie" id="">
+            <option value="maulajutt">Maula Jutt</option>
+            <option value="warr">Warr</option>
+            <option value="joker">Joker</option>
+        </select>
+
+        <br><br>
+
+        <label for="">Mode of Payment : </label>
+        <input type="radio" value="cash" name="payment"> Cash
+        <input type="radio" value="debit" name="payment"> Debit Card
+        
+        <br><br>
+
+        <input type="submit" value="Book Now!" name="submitbtn">
+    </form>
+</body>
+</html>
