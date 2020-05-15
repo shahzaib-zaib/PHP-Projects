@@ -40,23 +40,39 @@
         // endif;
         // echo "Here is other statement";
 
-        $x = 15;
+        // $x = 15;
 
-        if ($s > 30) {
-            echo "X is Greater.";
-        }else{
-            echo "X is Smaller.";
-        }
+        // if ($s > 30) {
+        //     echo "X is Greater.";
+        // }else{
+        //     echo "X is Smaller.";
+        // }
 
-        $name = "Hello World";
-        $gender = "Male";
+        // $name = "Hello World";
+        // $gender = "Male";
 
-        if ($gender == "Male") {
-            echo "Hello Mr." . $name;
-        }else{
-            echo "Hello Miss." . $name;
+        // if ($gender == "Male") {
+        //     echo "Hello Mr." . $name;
+        // }else{
+        //     echo "Hello Miss." . $name;
 
-        }
+        // }
+
+        $per = 80;
+
+        if ($per >= 80 && $per <= 100):
+            echo "You are in Merit";
+        elseif ($per >= 60 && $per <= 80):
+            echo "You are in Ist Devision";
+        elseif ($per >= 45 && $per <= 60):
+            echo "You are in IIst Devision";
+        elseif ($per >= 33 && $per <= 45):
+            echo "You are in IIIst Devision";
+        elseif ($per < 33):
+            echo "You are Fail";
+        else{
+            echo "Please Enter Valid Percentage";
+        endif;
 
     ?>
 </body>
