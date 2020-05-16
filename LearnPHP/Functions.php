@@ -27,7 +27,7 @@
 
         //Function with parameters
         function hello($fname="First",$lname="Last"){
-            echo "Hello $name $lname.<br>";
+            echo "Hello $fname $lname.<br>";
         }
 
         function sum($a, $b){
@@ -49,6 +49,45 @@
         sum($one, $two);
 
 
+        //Function with return
+        function hello($fname="First",$lname="Last"){
+            $v =  "$fname $lname";
+
+            return $v;
+        }
+
+        echo hello("Shahzaib" , "Zaib");
+
+
+
+        function hello($fname="First",$lname="Last"){
+            $v =  "$fname $lname";
+
+            return $v;
+        }
+
+        $name hello("Shahzaib" , "Zaib");
+
+        echo "Hello $name";
+
+
+
+        function sum($math, $eng, $sc){
+            $s = $math + $eng + $sc
+            return $s;
+        }
+
+        function percentage($st){
+            $per = $st / 3;
+
+            echo $per;
+        }
+
+        $total = sum(55,65,88);
+
+        percentage($total);
+
+        echo $total;
 
     ?>
 </body>
