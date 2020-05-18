@@ -44,6 +44,71 @@
         echo "</ul>";
 
 
+
+        //Associative Array
+
+        $age = array[
+            "bill" => 25,
+            "steve" => 28,
+            "elon" => 22
+        ];
+
+        $age["elon"] = 50;
+
+        echo "<pre>";
+        print_r($age);
+        echo "</pre>";
+
+        echo "<pre>";
+        var_dump($age);
+        echo "</pre>";
+
+        echo $age["bill"] . "<br>";
+        echo $age["steve"] . "<br>";
+        echo $age["elon"] . "<br>";
+        
+
+        $age = array[
+            "1" => 25,
+            "2" => 28,
+            "3" => 22
+        ];
+
+        echo "<pre>";
+        print_r($age);
+        echo "</pre>";
+
+        echo $age["1"] . "<br>";
+        echo $age["2"] . "<br>";
+        echo $age["3"] . "<br>";
+
+
+
+        //Foreach Loop Array
+
+        $colour = [
+            "red",
+            "green",
+            "blue"
+        ];
+
+        foreach ($colour as $value) {
+            echo $value . "<br>";
+        }
+
+
+        $age = [
+            "bill" => 25,
+            "steve" => 28,
+            "elon" => 22
+        ];
+
+        echo "<ul>";
+        foreach ($age as $key => $value) {
+            echo "<li> $key = $value </li>";
+        }
+        echo "</ul>";
+
     ?>
 </body>
 </html>
