@@ -15,7 +15,7 @@
             echo "<h1> $movie </h1>";
             echo "<h1> $payment </h1>";
 
-
+            //Silver
             if($category == "silver")
             {
                if($movie == "maulajutt")
