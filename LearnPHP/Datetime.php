@@ -47,6 +47,9 @@
 
         echo data('H : i : s A');
 
+        // 5 - 19 May , Tue 2020 - 11 : 16 pm
+        echo data('m - d M , D Y - h : i a');
+
 
 
 
