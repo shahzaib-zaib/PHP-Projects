@@ -8,7 +8,7 @@
 <body>
     <?php
 
-        //Array
+        //=================== Array ===================
         $colors = array["Red", "Yellow", "Green", "Blue", 20, 20.50];
 
         // echo $colors[0] . "<br>";
@@ -44,8 +44,7 @@
         echo "</ul>";
 
 
-
-        //Associative Array
+        //=================== Associative Array ===================
 
         $age = array[
             "bill" => 25,
@@ -83,8 +82,7 @@
         echo $age["3"] . "<br>";
 
 
-
-        //Foreach Loop Array
+        //=================== Foreach Loop Array ===================
 
         $colour = [
             "red",
@@ -110,8 +108,7 @@
         echo "</ul>";
 
 
-
-        //Multidimensional Array
+        //=================== Multidimensional Array ===================
 
         $emp = [
             [1,"Shahzaib","Director","300000"],
@@ -175,8 +172,7 @@
    }
    echo "</table>";
 
-
-   //Multidimensional Array With List
+    //=================== Multidimensional Array With List ===================
 
    //Index Array
    $emp = [
@@ -200,8 +196,8 @@
     echo "</table>";
 
 
+    //=================== Associative Array ===================
 
-    //Associative Array
     $emp = [
         [
             "id" => 1,
@@ -239,6 +235,73 @@
         echo "<tr><td>$id</td> <td>$name</td> <td>$desig</td> <td>$salery</td></tr>";
     }
     echo "</table>";
+
+
+    //=================== Array Count & Sizeof Function ===================
+
+    $food = array('orange', 'banana', 'apple', 'grapes');
+
+    echo sizeof($food);
+
+
+    $food = array(
+        'Fruits' => array('orange', 'banana', 'appale'),
+        'veggie' => array('carrot', 'collard', 'pea')
+    );
+
+    //echo sizeof($food,1);
+    echo sizeof($food['Fruits'],1);
+
+    //second approch
+    $food = array('orange', 'banana', 'apple', 'grapes');
+
+    $len = count($food);
+
+    for ($i=0; $i < $len; $i++) { 
+        echo $food[$i] . "<br>";
+    }
+
+    //third approch
+    $food = array('orange', 'banana', 'apple', 'grapes', 'orange');
+
+    echo "<pre>";
+    print_r(array_count_values($food));
+    echo "</pre>";
+
+
+
+    //=================== Array In_array & Array_search Function ===================
+
+    $food = array('orange', 'banana', 'apple', 'grapes');
+
+    if(in_array('apple', $food, true)){
+        echo "Find Successfully.";
+    }else{
+        echo "Can't Find."
+    }
+
+
+
+    $a = array(array('p','h'), array('p','r'), 'o');
+
+    if(in_array(array('p','h'), $a, true)){
+        echo "Find Successfully.";
+    }else{
+        echo "Can't Find."
+    }
+
+
+
+    $food = array('orange', 'banana', 'apple', 'grapes');
+
+    echo array_search('apple', $food);
+
+
+    $food = array('a' => 'orange', 'b' => 'banana', 'c' => 'apple', 'd' => 'grapes');
+
+    echo array_search('apple', $food);
+
+    
 
     ?>
 </body>
