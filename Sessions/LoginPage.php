@@ -29,6 +29,7 @@
             $b = $_GET['password'];
             if ($a == "Admin" && $b == "123") {
                 $_SESSION['name'] = $a;
+                $_SESSION['Logintime'] = time();
                 header('location:WelcomePage.php');
             }
             else

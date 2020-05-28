@@ -10,16 +10,22 @@
     <?php
 
         session_start();
-
         if (isset($_SESSION['name'])) {
+            if ((time() - $_SESSION['Logintime']) > 60) {
+                header('location:logout.php');
+            }
+            else
+            {
             echo "<h1>Welcome : " . $_SESSION['name'] . "</h1>";
+
+            }
         }
         else
         {
             header('location:LoginPage.php');
         }
-    ?>
 
+    ?>
     <a href="Logout.php">Logout</a>
 </body>
 </html>
