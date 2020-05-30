@@ -191,9 +191,6 @@ label {
     padding: 0 0 0 14px;
         padding-bottom: 0px;
 }
-td, td.label {
-    text-align: left;
-}
 body, button, input, label, select, td, textarea {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 12px;
@@ -223,9 +220,6 @@ textarea, .inputtext, .inputpassword {
 input, select, textarea {
     background-color: #fff;
     color: #1c1e21;
-}
-td, td.label {
-    text-align: left;
 }
 .menu_login_container #email {
     direction: ltr;
@@ -262,4 +256,93 @@ label {
     cursor: default;
     font-weight: 600;
     vertical-align: middle;
+}
+form.async_saving .uiButton.uiButtonSpecial .uiButtonText, form.async_saving .uiButton.uiButtonSpecial input, form.async_saving .uiButton.uiButtonConfirm .uiButtonText, form.async_saving .uiButton.uiButtonConfirm input, .uiButtonSpecial .uiButtonText, .uiButtonSpecial input, .uiButtonSpecial.uiButtonDisabled .uiButtonText, .uiButtonSpecial.uiButtonDisabled input, .uiButtonConfirm .uiButtonText, .uiButtonConfirm input, .uiButtonConfirm.uiButtonDisabled .uiButtonText, .uiButtonConfirm.uiButtonDisabled input {
+    color: #fff;
+}
+.uiButtonText, .uiButton input {
+    background: none;
+    border: 0;
+    color: #4b4f56;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+.menu_login_container .login_form_label_field {
+    padding-top: 4px;
+}
+.menu_login_container table tr td {
+    padding: 0 0 0 14px;
+        padding-top: 0px;
+}
+td, td.label {
+    text-align: left;
+}
+.menu_login_container .login_form_label_field label, .menu_login_container .login_form_label_field a {
+    color: #9cb4d8;
+    font-weight: normal;
+}
+a {
+    color: #385898;
+    cursor: pointer;
+    text-decoration: none;
+}
+#content {
+    margin: 0;
+    outline: none;
+    padding: 0;
+    width: auto;
+}
+.fb_content {
+    min-height: 640px;
+    padding-bottom: 20px;
+}
+.clearfix {
+    zoom: 1;
+}
+.fbIndex .gradient {
+    min-width: 980px;
+}
+.fbIndex .gradient {
+    background: url(/rsrc.php/v3/yB/r/TwAHgQi2ZPB.png) 0 bottom repeat-x;
+    background: linear-gradient(white, #D3D8E8);
+}
+.fbIndex .gradient .gradientContent {
+    margin: 0 auto;
+    position: relative;
+    width: 980px;
+}
+._ohe {
+    float: left;
+}
+._5iyy {
+    margin-right: 15px;
+    width: 565px;
+}
+._5iyx {
+    color: #0e385f;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 29px;
+    margin-top: 40px;
+    width: 450px;
+    word-spacing: -1px;
+}
+img {
+    border: 0;
+}
+._5iyz {
+    max-width: 400px;
+}
+._ohf {
+    float: right;
+}
+.rfloat {
+    float: right;
 }
