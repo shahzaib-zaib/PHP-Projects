@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login Page</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="Data/Logindata.php">
 </head>
 <body class="fbIndex UIPage_LoggedOut _-kb _605a b_c3pyn-ahh gecko win x1 Locale_en_GB cores-lt4 _19_u hasAXNavMenubar" dir="ltr" data-gr-c-s-loaded="true">
     <div id="pagelet_bluebar" data-referrer="pagelet_bluebar">
@@ -22,11 +21,9 @@
                             </a>
                         </h1>
                     </div>
-                    <div class="menu_login_container rfloat _ohf" data-testid="royal_login_form">
-                        <form id="login_form" action="#" method="post" novalidate="1" onsubmit="">
-                            <input type="hidden" name="jazoest" value="2665" autocomplete="off">
-                            <input type="hidden" name="lsd" value="AVrQxSD0" autocomplete="off">
-                            <table role="presentation" cellspacing="0">
+                    <div class="menu_login_container rfloat _ohf">
+                        <form id="login_form" action="" method="get">
+                            <table cellspacing="0">
                                 <tbody>
                                     <tr>
                                         <td class="html7magic">
@@ -44,8 +41,8 @@
                                             <input type="password" class="inputtext login_form_input_box" name="password" id="password" data-testid="royal_pass">
                                         </td>
                                         <td>
-                                            <label class="login_form_login_button uiButton uiButtonConfirm" id="loginbutton" for="u_0_4">
-                                                <input value="Log In" type="submit" name="btn" aria-label="Log In" data-testid="royal_login_button" id="u_0_4">
+                                            <label class="login_form_login_button uiButton uiButtonConfirm" id="" >
+                                                <input value="Log In" type="submit" name="btn" id="u_0_4">
                                             </label>
                                         </td>
                                     </tr>
@@ -429,5 +426,25 @@
         </div>
     </div>
 </div>
+
+<?php
+
+    session_start();
+    if (isset($_GET['btn'])) {
+        $username = $_GET['username'];
+        $email = $_GET['email'];
+        $pass = $_GET['password'];
+        if ($email == "shahzaib@gmail.com" && $pass == "123") {
+            $_SESSION['name'] = $username;
+            $_SESSION['logintime'] = time();
+            header('location:HomePage.php');
+        }
+        else
+            {
+                echo "<h3 style='color:red;'>Invalid Credentials</h3>";
+            }
+    }
+
+?>
 </body>
 </html>
