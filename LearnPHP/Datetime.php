@@ -21,7 +21,6 @@
         // 5 / 19 / 2020 
         echo date('m / d / Y');
 
-
         // 5 May 20 , Tue
         echo date('m M y , D');
 
@@ -30,6 +29,51 @@
 
         // 5 - 19 : Tuesday , May 2020
         echo data('m - d : l , M Y');
+
+
+        echo "Today is " . date("d") . "<br>"; // 12
+        echo "Today is " . date("jS") . "<br>"; // 12th
+
+        echo "Month is " . date("F") . "<br>"; // September
+        echo "Month is " . date("m") . "<br>"; // 09
+        echo "Month is " . date("n") . "<br>"; // 9
+        echo "Month is " . date("M") . "<br>"; // Sep
+
+        echo "Year is " . date("Y") . "<br>"; // 2020
+        echo "Year is " . date("y") . "<br>"; // 20
+
+        echo "Full Date is " . date("d/m/Y") . "<br>"; // 12/09/2020
+        echo "Full Date is " . date("Y-m-d") . "<br>"; // 2020-09-12
+        echo "Full Date is " . date("Y-M-d") . "<br>"; // 2020-Sep-12
+
+        echo "Week Day is " . date("D") . "<br>"; // Thu
+        echo "Week Day is " . date("l") . "<br>"; // Thursday
+        echo "Week Day is " . date("N") . "<br>"; // 4
+        echo "Week Day is " . date("w") . "<br>"; // 4
+
+        echo "Day is " . date("z") . "<br>"; // 254
+        echo "Week of the year" . date("W") . "<br>"; // 37
+        echo "Days of the month" . date("t") . "<br>"; // 30
+
+        echo "Is this is leap year" . date("L") . "<br>"; // 0 or 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
