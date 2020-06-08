@@ -65,18 +65,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
         //================== Time ================//
 
         // a => am/pm
@@ -93,6 +81,34 @@
 
         // 5 - 19 May , Tue 2020 - 11 : 16 pm
         echo data('m - d M , D Y - h : i a');
+
+
+        echo "Hour is" . date("h") . "<br>"; // 02
+        echo "Hour is" . date("H") . "<br>"; // 00
+        echo "Hour is" . date("g") . "<br>"; // 2
+        echo "Hour is" . date("G") . "<br>"; // 0
+
+
+        echo "Minutes is" . date("i") . "<br>"; // 27
+
+        echo "Seconds is" . date("s") . "<br>"; // 59
+        
+        echo "Meridiem is" . date("a") . "<br>"; // am
+        echo "Meridiem is" . date("A") . "<br>"; // AM
+
+        echo "Time is" . date("h:i:sa") . "<br>"; // 12:55:20am
+
+        echo "Time & Date is" . date("d-m-Y h:i:sa") . "<br>"; // 16-09-2020 12:55:20am
+
+        echo "Time & Date is" . date("d-m-Y h:i:sa e") . "<br>"; // 16-09-2020 12:55:20am  // Asia/Karachi
+
+
+
+
+
+
+
+        
 
 
 
