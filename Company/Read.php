@@ -8,7 +8,7 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
 <?php
 
-    $con = mysqli_connect('localhost:3306', 'root', '', 'companydb');
+    $con = mysqli_connect('localhost:3308', 'root', '', 'companydb');
     $fetch_query = "select * from employee";
     $execute = mysqli_query($con, $fetch_query);
     $totalrows = mysqli_num_rows($execute);
@@ -39,6 +39,9 @@
                 <td>". $records['EmpPhoneNumber'] ."</td>
                 <td>". $records['EmpQualitfication'] ."</td>
                 <td>". $records['EmpSalary'] ."</td>
+                <td><a href='Delete.php?Id=$records[EmailId]'>Delete</a></td>
+                <td><a href='Edit.php?Id=$records[EmailId]&name=$records[EmpName]&email=$records[EmpEmail]&gen=$records[EmpGender]&num=$records[EmpPhoneNumber]&qual=$records[EmpQualitfication]&sal=$records[EmpSalary]'>Edit</a></td>
+
             </tr>";
 
             }
