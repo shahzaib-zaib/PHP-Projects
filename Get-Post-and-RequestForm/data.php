@@ -1,5 +1,17 @@
 <?php
 
+        // echo "<pre>";
+        // print_r($_GET);
+        // echo "</pre>";
+
+        // echo $_GET['username'];
+        // echo $_GET['useremail'];
+        // echo $_GET['category'];
+        // echo $_GET['timing'];
+        // echo $_GET['payment'];
+
+
+
         if(isset($_GET['submitbtn'])){
             $name = $_GET['username'];
             $email = $_GET['useremail'];
