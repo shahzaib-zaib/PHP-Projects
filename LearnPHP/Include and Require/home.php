@@ -6,8 +6,14 @@
     </head>
     <body>
         <div id="wrapper">
-            <?php include 'header.php'; ?>
-            <?php require 'sidebar.php'; ?>
+			<?php include_once 'header.php'; ?>
+            <?php include_once 'header.php'; ?>
+            <?php include_once 'header.php'; ?>
+			
+			<?php require_once 'sidebar.php'; ?>
+            <?php require_once 'sidebar.php'; ?>
+            <?php require_once 'sidebar.php'; ?>
+			
             
             <div id="content">
 				<h1>FreeBSD/ppc Project</h1>
