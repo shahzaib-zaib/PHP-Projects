@@ -1,5 +1,17 @@
 <?php
 
+        // echo "<pre>";
+        // print_r($_POST);
+        // echo "</pre>";
+
+        // echo $__POST['username'];
+        // echo $__POST['useremail'];
+        // echo $__POST['quan'];
+        // echo $__POST['category'];
+        // echo $__POST['movie'];
+        // echo $__POST['payment'];
+
+
         if(isset($_POST['submitbtn'])){
             $name = $_POST['username'];
             $email = $_POST['useremail'];
