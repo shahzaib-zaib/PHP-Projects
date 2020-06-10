@@ -1,0 +1,131 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
+ol,ul {
+list-style: none;
+}
+body {
+    line-height: 1.5;
+    font-family: sans-serif;
+}
+a {
+    color: darkred;
+}
+h1 {
+	color:darkred;
+	font-weight:bold;
+	font-size:18px;
+	margin:20px 0px 15px 0px;
+}
+
+h2 {
+	color:darkred;
+	font-weight:bold;
+	margin:10px 0px;
+}
+#header {
+    background-color: darkred;
+}
+#banner {
+    float: left;
+    width: 600px;
+    height: 75px;
+}
+    #banner p {
+        color: white;
+        font-size: 18px;
+        margin: 22px;
+    }
+#blank {
+        float: left;
+        width: 160px;
+        height: 50px;
+        background-color: white;
+        margin: 22px;
+    }
+#tools {
+    float: right;
+    width: 300px;
+    color: white;
+}
+#tools a {
+    color: orange;
+}
+#tools ul li {
+    display: inline;
+    border-right: 1px solid white;
+    padding-right: 3px;
+    font-size: 10px
+}
+#tools form {
+    font-size: 10px;
+    margin: 0px 3px 50px
+}
+#search {
+    padding-left: 6px;
+}
+#submit {
+    padding: 0px 4px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+#banner img {
+    float: left;
+    margin-left: 40px;
+}
+#navmain {
+    background-color: lightgray;
+    clear: both;
+    padding: 0px 0px 10px 0px
+}
+    #navmain li {
+        display: inline;
+        padding: 0px 8px 0px 5px;
+        border-right: 1px solid darkgrey
+        height: 20px;
+    }
+    #navmain a {
+        color: black;
+        font-size: 11px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    #navmain a:hover {
+        color: darkred;
+    }
+#sidebar {
+    float: left;
+    width: 120px;
+    height: 200px;
+    font-size: 12px;
+    margin: 25px;
+    padding: 10px 15px 10px 30px;
+    border: 1px solid lightgray;
+    background-color: lavender;
+    list-style-type: disc;
+    color: darkred
+}
+.date {
+	font-weight:bold;
+}
+
+#content {
+	float:left;
+	width:600px;
+	font-size:12px;
+}
+
+	#content ul li {
+		list-style-type:disc;
+		margin-left:40px;
+	}
+
+	#content ol li {
+		list-style-type:decimal;
+		margin-left:40px;
+	}
