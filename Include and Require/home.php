@@ -7,7 +7,7 @@
     <body>
         <div id="wrapper">
             <?php include 'header.php'; ?>
-            <?php include 'sidebar.php'; ?>
+            <?php require 'sidebar.php'; ?>
             
             <div id="content">
 				<h1>FreeBSD/ppc Project</h1>
