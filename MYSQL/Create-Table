@@ -37,18 +37,10 @@ Numeric Datatype in MySQL
 
 
 
-Numeric Datatype in MySQL
+Date and Time Datatype in MySQL
 
-1.  BIT (size) 1 to 64
-2.  TINYINT(size) -128 to 127
-3.  INT(size) -2147483648 to 2147483647
-4.  INTEGER(size) -2147483648 to 2147483647
-5.  SMALLINT(size) -32768 to 32767
-6.  MEDIUMINT(size) -8388608 to 8388607
-7.  BIGINT(size) 16,777,215 characters
-8.  BOOL 4,294,967,295 characters
-9.  BOOLEAN 255 bytes
-10. FLOAT(p) 65,535 bytes
-11. DOUBLE(size, d) 16,777,215 bytes
-12. DECIMAL(size, d) 4,294,967,295 bytes
-13. DEC(size, d) list up to 65535 values
+1.  DATE '1000-01-01' to '9999-12-31'
+2.  DATETIME(fsp) YYYY-MM-DD hh:mm:ss
+3.  TIMESTAMP(fsp) YYYY-MM-DD hh:mm:ss
+4.  TIME(fsp) hh:mm:ss
+5.  YEAR four-digit fotmat : 1901
