@@ -1,3 +1,8 @@
+<?php
+    if (!isset($_SESSION['role'])) {
+        header('location:login.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,12 +31,24 @@
             <li class="nav-item active">
                 <a class="nav-link" href="Home.php">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="About.php">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="Contact.php">Contact</a>
-            </li>
+            <?php
+                
+                session_start();
+
+                if ($_SESSION['role'] == "Admin") {
+                    echo "<li class='nav-item'>
+                    <a class='nav-link' href='About.php'>About</a>
+                </li>";
+                }
+                else
+                {
+                    echo "<li class='nav-item'>
+                    <a class='nav-link' href='Contact.php'>Contact</a>
+                </li>";
+                }
+
+            ?>
+            
             <li class="nav-item">
                 <a class="nav-link" href="Logout.php">Logout</a>
             </li>
