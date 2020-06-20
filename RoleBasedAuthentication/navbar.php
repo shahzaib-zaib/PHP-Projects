@@ -32,6 +32,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="Contact.php">Contact</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Logout.php">Logout</a>
+            </li>
             </ul>
         </div>
         </nav>
