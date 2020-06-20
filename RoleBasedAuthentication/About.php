@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <body>
+<?php require("navebar.php"); ?>
 <h1>This is my About Page</h1>
+<?php require("footer.php"); ?>
 </body>
 </html>
