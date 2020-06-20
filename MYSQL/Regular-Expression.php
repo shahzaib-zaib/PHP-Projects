@@ -11,3 +11,5 @@ select column1, column2, column3,.....;
 FROM table_name
 
 WHERE column_name REGEXP pattern;
+
+
