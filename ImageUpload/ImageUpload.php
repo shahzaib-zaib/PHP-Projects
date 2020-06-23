@@ -19,11 +19,25 @@
 
             if (isset($_POST['btn'])) 
             {
-                $imagename = $_FILES['ImageAyi']['name'][$i];
-                $imagetype = $_FILES['ImageAyi']['type'][$i];
-                $imagetemp = $_FILES['ImageAyi']['temp_name'][$i];
-                $imageerror = $_FILES['ImageAyi']['error'][$i];
-                $imagesize = $_FILES['ImageAyi']['size'][$i];
+                echo "<pre>";
+                print_r($_FILES['ImageAyi']);
+                echo "</pre>";
+                $imagename = $_FILES['ImageAyi']['name'];
+                $imagetype = $_FILES['ImageAyi']['type'];
+                $imagetemp = $_FILES['ImageAyi']['temp_name'];
+                $imageerror = $_FILES['ImageAyi']['error'];
+                $imagesize = $_FILES['ImageAyi']['size'];
+
+                if (strtolower($imagetype) == "image/jpeg" || strtolower($imagetype) == "image/jpg" ) {
+                    echo "<script>
+                            alert('File Accepted');
+                          </script>"
+                } else {
+                    echo "<script>
+                            alert('Extension Not Supported, jpeg and jpg formats are allowed only');
+                          </script>"
+                }
+                
             }
 
     ?>
