@@ -15,7 +15,7 @@
     <?php
 
         error_reporting(0);
-
+        $con = mysqli_connect('localhost:3306', 'root', '', 'db_name')
 
             if (isset($_POST['btn'])) 
             {
@@ -29,9 +29,20 @@
                 $imagesize = $_FILES['ImageAyi']['size'];
 
                 if (strtolower($imagetype) == "image/jpeg" || strtolower($imagetype) == "image/jpg" ) {
-                    echo "<script>
+                    if ($imagesize <= 1000000) {
+                        $saveImage = "Images/" . $imagename;
+                        $insert_query = "insert into imageupload(ImageAddress) value('$saveImage')";
+                        move_uploaded_file($imagetemp,$saveImage);
+                        echo "<script>
                             alert('File Accepted');
                           </script>"
+                          echo "<img src='$saveImage' alt='Not Available' width='100px' height='100px'>";
+                    } else {
+                        echo "<script>
+                            alert('File size must not be greater than 1MB');
+                          </script>"
+                    }
+                    
                 } else {
                     echo "<script>
                             alert('Extension Not Supported, jpeg and jpg formats are allowed only');
