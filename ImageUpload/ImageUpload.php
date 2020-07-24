@@ -15,10 +15,9 @@
     <?php
 
         error_reporting(0);
-        $con = mysqli_connect('localhost:3306', 'root', '', 'db_name')
+        $con = mysqli_connect('localhost', 'root', '', 'db_name');
 
-            if (isset($_POST['btn'])) 
-            {
+            if(isset($_POST['btn'])){
                 echo "<pre>";
                 print_r($_FILES['ImageAyi']);
                 echo "</pre>";
