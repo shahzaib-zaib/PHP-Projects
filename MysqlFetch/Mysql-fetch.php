@@ -54,4 +54,22 @@
     while($row2 = mysqli_fetch_row($result2)){
         echo $row2[1] . " " . $row2[2]. "<br>";
     }
+
+
+
+
+    #=========================== Mysql Fetch All ===========================#
+
+    $sql3 = "SELECT * FROM Students";
+    $result3 = mysqli_query($con, $sql3) or die("Query Failed");
+
+    $row3 = mysqli_fetch_all($result3, MYSQLI_ASSOC); // Fetch array gives 2 types of result and can pass 2 parameter "MYSQLI_ASSOC" or "MYSQLI_NUM" Default Value is MYSQLI_BOTH
+    echo "<pre>";
+    print_r($row3);
+    echo "</pre>";
+    
+    foreach ($row3 as $data) {
+        echo $data['Id'] . " " . $data['first_name']. " " . $data['last_name'] . "<br>";
+    }
+
 ?>
