@@ -67,9 +67,23 @@
     echo "<pre>";
     print_r($row3);
     echo "</pre>";
-    
+
     foreach ($row3 as $data) {
         echo $data['Id'] . " " . $data['first_name']. " " . $data['last_name'] . "<br>";
     }
+
+
+
+
+    #=========================== Mysql Fetch Field ===========================#
+
+    $sql4 = "SELECT * FROM Students";
+    $result4 = mysqli_query($con, $sql4) or die("Query Failed");
+
+    $row4 = mysqli_fetch_field($result4); // Fetch array gives 2 types of result and can pass 2 parameter "MYSQLI_ASSOC" or "MYSQLI_NUM" Default Value is MYSQLI_BOTH
+    echo "<pre>";
+    print_r($row4);
+    echo "</pre>";
+    
 
 ?>
