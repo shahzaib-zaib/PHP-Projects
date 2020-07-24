@@ -8,12 +8,12 @@
 
     #=========================== Mysql Fetch Assoc ===========================#
 
-    //$row = mysqli_fetch_assoc($result);
-    // echo "<pre>";
-    // print_r($row);
-    // echo "</pre>";
+    $row = mysqli_fetch_assoc($result);
+    echo "<pre>";
+    print_r($row);
+    echo "</pre>";
 
-    //echo $row['first_name'] . " " . $row['last_name'];
+    echo $row['first_name'] . " " . $row['last_name']. "<br>";
 
     while($row = mysqli_fetch_assoc($result)){
         echo $row['first_name'] . " " . $row['last_name']."<br>";
@@ -21,4 +21,37 @@
 
 
 
+
+    #=========================== Mysql Fetch Row ===========================#
+
+    $sql1 = "SELECT * FROM Students";
+    $result1 = mysqli_query($con, $sql1) or die("Query Failed");
+
+    $row1 = mysqli_fetch_row($result1);
+    echo "<pre>";
+    print_r($row1);
+    echo "</pre>";
+    echo $row1[1] . " " . $row1[2]. "<br>";
+
+    while($row1 = mysqli_fetch_row($result1)){
+        echo $row1[1] . " " . $row1[2]. "<br>";
+    }
+
+
+
+
+    #=========================== Mysql Fetch Array ===========================#
+
+    $sql2 = "SELECT * FROM Students";
+    $result2 = mysqli_query($con, $sql2) or die("Query Failed");
+
+    $row2 = mysqli_fetch_array($result2);
+    echo "<pre>";
+    print_r($row2);
+    echo "</pre>";
+    echo $row2[1] . " " . $row2[2]. "<br>";
+
+    while($row2 = mysqli_fetch_row($result2)){
+        echo $row2[1] . " " . $row2[2]. "<br>";
+    }
 ?>
