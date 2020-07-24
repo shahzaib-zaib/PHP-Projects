@@ -45,7 +45,7 @@
     $sql2 = "SELECT * FROM Students";
     $result2 = mysqli_query($con, $sql2) or die("Query Failed");
 
-    $row2 = mysqli_fetch_array($result2);
+    $row2 = mysqli_fetch_array($result2,MYSQLI_ASSOC); // Fetch array gives 2 types of result and can pass 2 parameter "MYSQLI_ASSOC" or "MYSQLI_NUM" Default Value is MYSQLI_BOTH
     echo "<pre>";
     print_r($row2);
     echo "</pre>";
