@@ -61,17 +61,15 @@
                     <input type="button" id="load-button" value="Load Data">
                 </div>
                 <div class="col-md-12">
-                    <table class="content-table">
-                        <thead>
+                    <table id="table-data" class="content-table">
+                        <tr>
                             <th>ID</th>
                             <th>Name</th>
-                        </thead>
-                        <tbody id="table-data">
-                            <tr>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Shahzaib Zaib</td>
+                        </tr>
                     </table>
                 </div>
             </div>
