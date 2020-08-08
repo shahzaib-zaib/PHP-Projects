@@ -30,13 +30,17 @@
     <div id="admin-content">
         <div class="container">
             <div class="row">
-                <div class="col-md-10">
-                    <h1 class="admin-heading">All Users</h1>
+                <div class="col-md-5">
+                    First Name : <input type="text" id="fname">
+                </div>
+                <div class="col-md-5">
+                    Last Name : <input type="text" id="lname" >
                 </div>
                 <div class="col-md-2">
-                    <input type="button" id="load-button" value="Load Data">
+                    <input type="submit" id="save-button" value="Save">
                 </div>
             </div>
+            <br>
             <div class="row">
                 <div class="col-md-12">
                     <table id="table-data" class="content-table">
@@ -61,7 +65,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script>
         $(document).ready(function(){
-            $("#load-button").on("click", function(e){
+            function loadTable(){
                 $.ajax({
                     url : "ajax-load.php",
                     type : "POST",
@@ -69,7 +73,8 @@
                         $("#table-data").html(data);
                     }
                 });
-            });
+            }
+            loadTable();
         });
     </script>
 </body>
