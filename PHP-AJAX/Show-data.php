@@ -28,7 +28,7 @@
     </div>
     <!-- /HEADER -->
     <!-- Menu Bar -->
-    <div id="admin-menubar">
+    <!-- <div id="admin-menubar">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -49,16 +49,16 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- /Menu Bar -->
     <div id="admin-content">
         <div class="container">
             <div class="row">
                 <div class="col-md-10">
-                    <h1 class="admin-heading">All Posts</h1>
+                    <h1 class="admin-heading">All Users</h1>
                 </div>
                 <div class="col-md-2">
-                    <a class="add-new" href="add-post.php">add post</a>
+                    <input type="button" id="load-button" value="Load Data">
                 </div>
                 <div class="col-md-12">
                     <table class="content-table">
@@ -66,7 +66,11 @@
                             <th>ID</th>
                             <th>Name</th>
                         </thead>
-                        <tbody>
+                        <tbody id="table-data">
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -86,5 +90,18 @@
     <!-- /Footer -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#load-button").on("click", function(e){
+                $.ajax({
+                    url : "ajax-load.php",
+                    type : "POST",
+                    success : function(data){
+                        $("#table-data").html(data);
+                    }
+                })
+            })
+        })
+    </script>
 </body>
 </html>
