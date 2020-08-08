@@ -62,14 +62,7 @@
                 </div>
                 <div class="col-md-12">
                     <table id="table-data" class="content-table">
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Shahzaib Zaib</td>
-                        </tr>
+                        
                     </table>
                 </div>
             </div>
