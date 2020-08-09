@@ -78,18 +78,22 @@
 
             $("#save-button").on("click", function(e){
                 e.preventDefault();
-                var fname = $("$fname").val();
-                var lname = $("$lname").val();
+                var fname = $("#fname").val();
+                var lname = $("#lname").val();
 
                 $.ajax({
                     url : "ajax-insert.php",
                     type : "POST",
                     data : {first_name:fname, last_name:lname},
                     success : function(data){
-                        loadTable();
+                        if(data == 1){
+                            loadTable();
+                        }else{
+                            alert("Can't Save Record.");
+                        }
                     }
                 });
-            }
+            })
         });
     </script>
 </body>
