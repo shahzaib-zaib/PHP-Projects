@@ -34,6 +34,14 @@
         right: 15px;
         top: 15px;
     }
+    .delete-btn{
+        background: red;
+        color: #fff;
+        border: 0;
+        padding: 4px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
 </style>
 <body>
     <!-- HEADER -->
@@ -129,6 +137,19 @@
                     }
                 });
                 }
+            });
+
+            $(document).on("click", ".delete-btn", function(){
+                var studentId = $(this).data("id");
+                
+                $.ajax({
+                    url : "ajax-delete.php",
+                    type: "POST",
+                    data: {id : studentId},
+                    success: function(data){
+                        
+                    }
+                });
             });
         });
     </script>
