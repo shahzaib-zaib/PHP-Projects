@@ -13,6 +13,28 @@
     <!-- Custom stlylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+<style>
+    #success-message{
+        background: #DEF1D8;
+        color: green;
+        padding: 10px;
+        margin: 10px;
+        display: none;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+    #error-message{
+        background: #EFDCDD;
+        color: red;
+        padding: 10px;
+        margin: 10px;
+        display: none;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+</style>
 <body>
     <!-- HEADER -->
     <div id="header-admin">
@@ -29,17 +51,19 @@
     <!-- /HEADER -->
     <div id="admin-content">
         <div class="container">
-            <div class="row">
-                <div class="col-md-5">
-                    First Name : <input type="text" id="fname">
+            <form id="addform">
+                <div class="row">
+                    <div class="col-md-5">
+                        First Name : <input type="text" id="fname">
+                    </div>
+                    <div class="col-md-5">
+                        Last Name : <input type="text" id="lname" >
+                    </div>
+                    <div class="col-md-2">
+                        <input type="submit" id="save-button" value="Save">
+                    </div>
                 </div>
-                <div class="col-md-5">
-                    Last Name : <input type="text" id="lname" >
-                </div>
-                <div class="col-md-2">
-                    <input type="submit" id="save-button" value="Save">
-                </div>
-            </div>
+            </form>
             <br>
             <div class="row">
                 <div class="col-md-12">
@@ -47,6 +71,9 @@
                         
                     </table>
                 </div>
+                <div id="error-message"></div>
+                <div id="success-message"></div>
+
             </div>
         </div>
     </div>
@@ -81,19 +108,28 @@
                 var fname = $("#fname").val();
                 var lname = $("#lname").val();
 
-                $.ajax({
+                if(fname == "" || lname == ""){
+                    $("#error-message").html("All fields are required.").slideDown();
+                    $("#success-message").slideUp();
+                }else{
+                    $.ajax({
                     url : "ajax-insert.php",
                     type : "POST",
                     data : {first_name:fname, last_name:lname},
                     success : function(data){
                         if(data == 1){
                             loadTable();
+                            $("#addform").trigger("reset");
+                            $("#success-message").html("Data Inserted successfully.").slideDown();
+                            $("#error-message").slideUp();
                         }else{
-                            alert("Can't Save Record.");
+                            $("#error-message").html("Can't Save Record.").slideDown();
+                            $("#success-message").slideUp();
                         }
                     }
                 });
-            })
+                }
+            });
         });
     </script>
 </body>
