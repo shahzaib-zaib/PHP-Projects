@@ -6,6 +6,10 @@
 
     $sql = "DELETE FROM students WHERE Id = {$student_id}";
 
-    $result = mysqli_query($con, $sql) or die("SQL Query Failed.");
+    if(mysqli_query($con, $sql)){
+        echo 1;
+    }else{
+        echo 0;
+    }
 
 ?>

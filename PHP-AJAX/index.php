@@ -98,6 +98,7 @@
     <!-- /Footer -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script>
         $(document).ready(function(){
             function loadTable(){
@@ -140,16 +141,27 @@
             });
 
             $(document).on("click", ".delete-btn", function(){
+               if(confirm("Are you sure you want to delete this ?")){
                 var studentId = $(this).data("id");
+                    var element = this;
+
+                    $.ajax({
+                        url : "ajax-delete.php",
+                        type: "POST",
+                        data: {id : studentId},
+                        success: function(data){
+                            if(data = 1){
+                                $(element).closest("tr").fadeOut();
+                            }else{
+                                $("#error-message").html("Can't Delete Record.").slideDown();
+                                $("#success-message").slideUp();
+                            }
+                        }
+                    });
+               }
+
+                    
                 
-                $.ajax({
-                    url : "ajax-delete.php",
-                    type: "POST",
-                    data: {id : studentId},
-                    success: function(data){
-                        
-                    }
-                });
             });
         });
     </script>
