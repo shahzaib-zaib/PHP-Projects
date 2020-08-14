@@ -51,9 +51,30 @@
                 </div>
                 <div id="error-message"></div>
                 <div id="success-message"></div>
+                <div id="modal">
+                    <div id="modal-form">
+                        <h2>Edit Form</h2>
+                        <table cellpadding="10px" width="100%">
+                            <tr>
+                                <td>First Name</td>
+                                <td><input type="text" name="" id="edit-fname"></td>
+                            </tr>
+                            <tr>
+                                <td>Last Name</td>
+                                <td><input type="text" name="" id="edit-lname"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><input type="submit" name="" id="edit-submit" value="save"></td>
+                            </tr>
+                        </table>
+                        <div id="close-btn">X</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    
     <!-- Footer -->
     <div id ="footer">
         <div class="container">
@@ -65,27 +86,8 @@
         </div>
     </div>
     <!-- /Footer -->
-
-    <div id="model">
-        <div id="modal-form">
-            <h2>Edit Form</h2>
-            <table cellpadding="0" width="100%">
-                <tr>
-                    <td>First Name</td>
-                    <td><input type="text" name="" id="edit-fname"></td>
-                </tr>
-                <tr>
-                    <td>Last Name</td>
-                    <td><input type="text" name="" id="edit-lname"></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" name="" id="edit-submit" value="save"></td>
-                </tr>
-            </table>
-            <div id="close-btn"></div>
-        </div>
-    </div>
+    
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
@@ -154,6 +156,22 @@
             //Show Modal Box
             $(document).on("click", ".edit-btn", function(){
                 $("#modal").show();
+                 var studentId = $(this).data("eid");
+                 
+                 $.ajax({
+                     url: "load-update-form.php",
+                     type: "POST",
+                     data: {id: studentId},
+                     success: function(data){
+                        
+                     }
+                 })
+
+            });
+
+            //Hide Modal Box
+            $("#close-btn").on("click", function(){
+                $("#modal").hide();
             });
 
         });

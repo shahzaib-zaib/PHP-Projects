@@ -576,7 +576,7 @@ i.fa{
     cursor: pointer;
 }
 
-#model{
+#modal{
     background: rgba(0,0,0,0.7);
     position: fixed;
     left: 0;
@@ -586,12 +586,17 @@ i.fa{
     z-index: 100;
     display: none;
 }
-#model-form{
+#modal-form{
     background: #fff;
-    width: 30%;
-    left: calc(50%-15%);
+    width: 40%;
+    left: calc(50%-20%);
     padding: 15px;
     border-radius: 4px;
+}
+#modal-form h2{
+    margin: 0 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000;
 }
 #close-btn{
     background: red;
@@ -600,6 +605,11 @@ i.fa{
     height: 30px;
     line-height: 30px;
     text-align: center;
+    border-radius: 50;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    cursor: pointer;
 }
 /* ===================== */
 /* FrontEnd CSS END */
