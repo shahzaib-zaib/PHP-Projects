@@ -42,6 +42,14 @@
         border-radius: 3px;
         cursor: pointer;
     }
+    .edit-btn{
+        background: green;
+        color: #fff;
+        border: 0;
+        padding: 4px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
 </style>
 <body>
     <!-- HEADER -->

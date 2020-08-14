@@ -11,12 +11,15 @@
         <tr>
             <th width="100px">Id</th>
             <th>Name</th>
+            <th width="100px">Edit</th>
             <th width="100px">Delete</th>
 
         </tr>';
 
         while($row = mysqli_fetch_assoc($result)){
-            $output .="<tr><td>{$row["Id"]}</td><td>{$row["first_name"]} {$row["last_name"]}</td><td><button class='delete-btn' data-id='{$row["Id"]}'>Delete</button></td></tr>";
+            $output .="<tr><td>{$row["Id"]}</td><td>{$row["first_name"]} {$row["last_name"]}</td>
+            <td><button class='edit-btn' data-id='{$row["Id"]}'>Edit</button></td>
+            <td><button class='delete-btn' data-id='{$row["Id"]}'>Delete</button></td></tr>";
         }
         $output .="</table>";
 
