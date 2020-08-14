@@ -55,18 +55,6 @@
                     <div id="modal-form">
                         <h2>Edit Form</h2>
                         <table cellpadding="10px" width="100%">
-                            <tr>
-                                <td>First Name</td>
-                                <td><input type="text" name="" id="edit-fname"></td>
-                            </tr>
-                            <tr>
-                                <td>Last Name</td>
-                                <td><input type="text" name="" id="edit-lname"></td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td><input type="submit" name="" id="edit-submit" value="save"></td>
-                            </tr>
                         </table>
                         <div id="close-btn">X</div>
                     </div>
@@ -163,7 +151,7 @@
                      type: "POST",
                      data: {id: studentId},
                      success: function(data){
-                        
+                        $("#modal-form table").html(data);
                      }
                  })
 
