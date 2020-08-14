@@ -175,9 +175,11 @@
                     type: "POST",
                     data: {id: stuId, first_name:fname, last_name:lname},
                     success: function(data)(
-                        $("#modal").hide();
-                    )
-                })
+                        if(data = 1){
+                            $("#modal").hide();
+                        }
+                    );
+                });
 
             });
 
