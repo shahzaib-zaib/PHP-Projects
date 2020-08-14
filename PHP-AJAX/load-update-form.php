@@ -13,7 +13,8 @@
         while($row = mysqli_fetch_assoc($result)){
             $output .="<tr>
                         <td>First Name</td>
-                        <td><input type='text' name='' id='edit-fname' value='{$row["first_name"]}'></td>
+                        <td><input type='text' name='' id='edit-fname' value='{$row["id"]}'>
+                        <input type='text' name='' id='edit-id' hidden value='{$row["first_name"]}'></td>
                     </tr>
                     <tr>
                         <td>Last Name</td>

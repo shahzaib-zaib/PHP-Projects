@@ -162,6 +162,25 @@
                 $("#modal").hide();
             });
 
+
+
+            //Save Update Form
+            $(document).on("click", ".edit-submit", function(){
+                var stuId = $("#edit-id").val();
+                var fname = $("#edit-fname").val();
+                var lname = $("#edit-lname").val();
+
+                $.ajax({
+                    url: "ajax-update-form.php",
+                    type: "POST",
+                    data: {id: stuId, first_name:fname, last_name:lname},
+                    success: function(data)(
+                        $("#modal").hide();
+                    )
+                })
+
+            });
+
         });
     </script>
 </body>
