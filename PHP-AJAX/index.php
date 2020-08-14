@@ -13,44 +13,6 @@
     <!-- Custom stlylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<style>
-    #success-message{
-        background: #DEF1D8;
-        color: green;
-        padding: 10px;
-        margin: 10px;
-        display: none;
-        position: absolute;
-        right: 15px;
-        top: 15px;
-    }
-    #error-message{
-        background: #EFDCDD;
-        color: red;
-        padding: 10px;
-        margin: 10px;
-        display: none;
-        position: absolute;
-        right: 15px;
-        top: 15px;
-    }
-    .delete-btn{
-        background: red;
-        color: #fff;
-        border: 0;
-        padding: 4px 10px;
-        border-radius: 3px;
-        cursor: pointer;
-    }
-    .edit-btn{
-        background: green;
-        color: #fff;
-        border: 0;
-        padding: 4px 10px;
-        border-radius: 3px;
-        cursor: pointer;
-    }
-</style>
 <body>
     <!-- HEADER -->
     <div id="header-admin">
@@ -89,7 +51,6 @@
                 </div>
                 <div id="error-message"></div>
                 <div id="success-message"></div>
-
             </div>
         </div>
     </div>
@@ -104,6 +65,27 @@
         </div>
     </div>
     <!-- /Footer -->
+
+    <div id="model">
+        <div id="modal-form">
+            <h2>Edit Form</h2>
+            <table cellpadding="0" width="100%">
+                <tr>
+                    <td>First Name</td>
+                    <td><input type="text" name="" id="edit-fname"></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><input type="text" name="" id="edit-lname"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" name="" id="edit-submit" value="save"></td>
+                </tr>
+            </table>
+            <div id="close-btn"></div>
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
@@ -167,10 +149,13 @@
                         }
                     });
                }
-
-                    
-                
             });
+
+            //Show Modal Box
+            $(document).on("click", ".edit-btn", function(){
+                $("#modal").show();
+            });
+
         });
     </script>
 </body>

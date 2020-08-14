@@ -18,7 +18,7 @@
 
         while($row = mysqli_fetch_assoc($result)){
             $output .="<tr><td>{$row["Id"]}</td><td>{$row["first_name"]} {$row["last_name"]}</td>
-            <td><button class='edit-btn' data-id='{$row["Id"]}'>Edit</button></td>
+            <td><button class='edit-btn' data-eid='{$row["Id"]}'>Edit</button></td>
             <td><button class='delete-btn' data-id='{$row["Id"]}'>Delete</button></td></tr>";
         }
         $output .="</table>";
